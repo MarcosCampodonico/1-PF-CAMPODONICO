@@ -1,0 +1,41 @@
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer mode="over" #drawer class="example-sidenav " mode="side">
+    <div class="alinear">
+    <mat-icon class="rotate">shopping_cart</mat-icon>
+    </div>
+    <div>
+    <mat-icon class="rotate">perm_identity</mat-icon>  
+    </div>
+    <div>
+      <mat-icon class="rotate" >mail_outline</mat-icon>
+    </div>
+    <div>
+      <mat-icon class="rotate">menu_book</mat-icon>
+    </div>
+    <div>
+      <mat-icon class="rotate">qr_code_2</mat-icon>  
+    </div>
+  </mat-drawer>
+  
+  <div class="example-sidenav-content">
+    
+    <mat-toolbar color="warn" >
+      <button
+        (click)="drawer.toggle()"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon >arrow_circle_right</mat-icon>
+      </button>
+      <span>Bienvenidos a UDIS</span>
+    </mat-toolbar>
+    
+
+    <main class="p-3">
+      
+      <app-users></app-users>
+    </main>
+  </div>
+</mat-drawer-container>

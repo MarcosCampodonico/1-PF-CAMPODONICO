@@ -1,0 +1,34 @@
+.example-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.example-sidenav-content {
+  height: 100%;
+  
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: 100px;
+  background-color:burlywood;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+main {
+  min-height: calc(100vh - #{64px});
+}
+.alinear{
+  justify-content: center;
+}
+.rotate:hover{
+  cursor: pointer;
+  color: red;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transition: 0.5s;
+
+}

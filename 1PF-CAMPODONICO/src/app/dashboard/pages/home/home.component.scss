@@ -1,0 +1,9 @@
+.rotate:hover{
+    cursor: pointer;
+    color: red;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transition: 0.5s;
+  
+  }
