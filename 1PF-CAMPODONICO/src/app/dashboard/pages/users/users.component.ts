@@ -52,4 +52,8 @@ export class UsersComponent {
       this.users = this.users.filter((u)=>u.id!== userToDelete.id)
     }
   }
+  mostrarTabla: boolean =false;
+  toggleTabla () {
+    this.mostrarTabla=!this.mostrarTabla
+  }
 }

@@ -1,3 +1,11 @@
 .color{
     background-color: bisque;
 }
+.rotate:hover{
+    cursor: pointer;
+    color:white;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transition: 0.5s;
+  }

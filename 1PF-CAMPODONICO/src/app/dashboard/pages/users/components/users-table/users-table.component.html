@@ -1,4 +1,6 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 color">
+<button (click)="toggleTabla()"  mat-raised-button color="accent" class="rotate">Alumnos</button>
+<button  mat-raised-button color="accent" class="rotate">Carreras</button>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 color" *ngIf="mostrarTabla">
 
  
   <ng-container matColumnDef="id">
@@ -34,4 +36,8 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+<br>
+<br>
+<br>
+<br>
+<br>
