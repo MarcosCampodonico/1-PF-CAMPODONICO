@@ -1,8 +1,8 @@
 <button (click)="toggleTabla()"  mat-raised-button color="accent" class="rotate">Alumnos</button>
-<button  mat-raised-button color="accent" class="rotate">Carreras</button>
+<button (click)="TablaVisibilidad()" mat-raised-button color="accent" class="rotate">Carreras</button>
+<button  mat-raised-button color="accent" class="rotate">PDF</button>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 color" *ngIf="mostrarTabla">
 
- 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -38,6 +38,26 @@
 </table>
 <br>
 <br>
-<br>
-<br>
-<br>
+<table mat-table [dataSource]="dataSource1" class="mat-elevation-z8 color" *ngIf="tablaVisible">
+
+ 
+  <ng-container matColumnDef="carrera">
+    <th mat-header-cell *matHeaderCellDef> carrera</th>
+    <td mat-cell *matCellDef="let element"> {{element.carrera}} </td>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="duracion">
+    <th mat-header-cell *matHeaderCellDef> duracion </th>
+    <td mat-cell *matCellDef="let element"> {{element.duracion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="modalidad">
+    <th mat-header-cell *matHeaderCellDef> modalidad</th>
+    <td mat-cell *matCellDef="let element"> {{element.modalidad}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+</table>
+

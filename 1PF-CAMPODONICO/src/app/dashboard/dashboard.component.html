@@ -2,10 +2,10 @@
 
   <mat-drawer mode="over" #drawer class="example-sidenav " mode="side">
     <div class="alinear">
-    <mat-icon class="rotate">shopping_cart</mat-icon>
+    <mat-icon  (click)="mostrarAlerta()" class="rotate">shopping_cart</mat-icon>
     </div>
     <div>
-    <mat-icon class="rotate">perm_identity</mat-icon>  
+    <mat-icon (click)="indicacion()" class="rotate">perm_identity</mat-icon>  
     </div>
     <div>
       <mat-icon class="rotate" >mail_outline</mat-icon>

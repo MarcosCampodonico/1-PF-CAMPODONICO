@@ -2,42 +2,47 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../../models';
 
 
+
+export interface studyRace {
+  carrera: string;
+  duracion: number;
+  modalidad: string;
+  
+}
+const ELEMENT_DATA: studyRace[] = [
+  {carrera: 'desarrollador Front-end', duracion: 1, modalidad: 'remoto'},
+  {carrera: 'desarrollador backend', duracion: 1, modalidad: 'remoto'},
+  {carrera: 'data scientist', duracion: 2, modalidad: 'remoto'}
+];
 @Component({
   selector: 'app-users-table',
   templateUrl: './users-table.component.html',
   styleUrls: ['./users-table.component.scss']
+  
 })
 export class UsersTableComponent {
-  tabla1Data = [
-    {n: 1, nombre: 'Desarrollo Front-End', modalidad: 'virtual'},
-    {n: 2, nombre: 'Desarrollo Backend', modalidad: 'virtual'},
-    {n: 3, nombre: 'Data Scientist', modalidad: 'virtual'},
-    {n: 4, nombre: 'Data Analitycs', modalidad: 'virtual'}
-  ]
-  displayedColumns: string[] = ['id', 'fullName','carrera', 'email', 'linkedin','eliminar-usuario']; 
   
+  displayedColumns: string[] = ['id', 'fullName','carrera', 'email', 'linkedin','eliminar-usuario']; 
+  displayedColumns1: string [] = ['carrera', 'duracion', 'modalidad']
+  dataSource1=ELEMENT_DATA
   @Input()
   dataSource: User[] = [];
   @Output()
   deleteUser = new EventEmitter<User>();
-  mostarCarrera: boolean = false;
+  
+  tablaVisible: boolean = true;
+  TablaVisibilidad(): void {
+  this.tablaVisible = !this.tablaVisible;
+}
+
+
   mostrarTabla: boolean = true;
   toggleTabla () {
     this.mostrarTabla = !this.mostrarTabla;
   }
-}
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+ 
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Desarrollo Front-end', weight: 1, symbol: 'H'},
-  {position: 2, name: 'Desarrollo Backend', weight: 1, symbol: 'He'},
-]
-export class TableColumnStylingExample {
-  displayedColumns: string[] = ['n°', 'titulo', 'modalidad', 'duracion'];
-  dataSource = ELEMENT_DATA;
-}
+
+
+

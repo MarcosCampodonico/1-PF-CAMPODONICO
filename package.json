@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.31",
     "sweetalert2": "^11.7.16"
+  },
+  "devDependencies": {
+    "@types/jspdf": "^2.0.0"
   }
 }
